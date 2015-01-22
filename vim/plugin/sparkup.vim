@@ -3,7 +3,7 @@
 if !exists('g:sparkup') | let g:sparkup = {} | endif | let s:c = g:sparkup
 
 " for which filetypes to enable sparkup
-let s:c.filetypes = get(s:c, 'filetypes','^\%(html\|xhtml\|xml\|ur\|urs\)$')
+let s:c.filetypes = get(s:c, 'filetypes','^\%(html\|xhtml\|xml\|ur\|urs\|iced\|php\)$')
 
 let s:c.use_vim_python_if_available = get(s:c, 'use_vim_python_if_available', 1)
 let s:c.python = get(s:c, 'py_file', 'python')
@@ -11,7 +11,7 @@ let s:c.python = get(s:c, 'py_file', 'python')
 fun! SparkupSetup()
     " mapping
     let s:c.lhs_expand = get(s:c, 'lhs_expand', '<c-e>')
-    let s:c.lhs_jump_next_empty_tag = get(s:c, 'lhs_jump_next_empty_tag', '<c-n>')
+    let s:c.lhs_jump_next_empty_tag = get(s:c, 'lhs_jump_next_empty_tag', '<c-n><c-e>')
 
     exec 'nnoremap <buffer> ' . s:c.lhs_expand . ' :call sparkup#Expand()<cr>'
     exec 'inoremap <buffer> ' . s:c.lhs_expand . ' <c-g>u<Esc>:call sparkup#Expand()<cr>'
