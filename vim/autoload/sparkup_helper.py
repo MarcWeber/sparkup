@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 def sparkup_expand():
     if not 'sparkup_router' in globals():

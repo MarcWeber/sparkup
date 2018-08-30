@@ -6,7 +6,7 @@ if !exists('g:sparkup') | let g:sparkup = {} | endif | let s:c = g:sparkup
 let s:c.filetypes = get(s:c, 'filetypes','^\%(html\|xhtml\|xml\|ur\|urs\|iced\|php\)$')
 
 let s:c.use_vim_python_if_available = get(s:c, 'use_vim_python_if_available', 1)
-let s:c.python = get(s:c, 'py_file', 'python')
+let s:c.python = get(s:c, 'python', 'python')
 
 fun! SparkupSetup()
     " mapping
